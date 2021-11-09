@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-bt" mode="ios">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ionic Started</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+</head>
+<script>
+    async function presentLoading() {
+        const loading = document.createElement('ion-loading');
+
+        loading.message = 'Please wait...';
+        loading.duration = 1300;
+
+        document.body.appendChild(loading);
+        await loading.present();
+
+        const { role, data } = await loading.onDidDismiss();
+    }
+</script>
+<style>
+    ion-toolbar {
+        --border-color: #222428;
+    }
+    #welcome-message {
+        margin-top: 16vh;
+    }
+    ion-button{
+        --border-radius: 60px;
+    }
+    #main{
+        width: 100%;
+    }
+</style>
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color="dark">
+              <ion-title>Socially</ion-title>
+            </ion-toolbar>
+          </ion-header>
+        <ion-content color="dark">
+            <ion-grid>
+                <ion-row class="ion-justify-content-center">
+                    <ion-col size=12>
+                        <img id="main" src="./imgs/bg-main.png"/>
+                    </ion-col>
+                    <ion-col size=10>
+                        <ion-text class="ion-text-center">
+                            <div id="welcome-message">
+                                <h2>The Best Photos from Good People</h2>
+                                <small>Anyone willing to get acquainted and communicated can use it for <strong>free</strong> and without <strong>limits</strong>.</small>
+                            </div>
+                        </ion-text>
+                    </ion-col>
+                    <ion-col class="ion-margin" size=12>
+                        <ion-button class="ion-margin" color="light" fill="outline" expand="block" onclick="presentLoading()">Login</ion-button>
+                        <ion-button class="ion-margin" color="warning" expand="block" onclick="presentLoading()">Sign Up</ion-button>
+                    </ion-row>
+            </ion-grid>
+        </ion-content>
+    </ion-app>
+</body>
+</html>
