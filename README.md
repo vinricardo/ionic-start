@@ -11,5 +11,5 @@
  > * ion-text
  > * ion-button  
 ## Resultado
-![alt img](./imgs/first-page.png)
-![alt img](./imgs/first-page-two.png)
+![alt img](./imgs/first-page.PNG)
+![alt img](./imgs/first-page-two.PNG)
