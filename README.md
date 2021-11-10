@@ -10,6 +10,7 @@
  > * ion-col
  > * ion-text
  > * ion-button  
+ > * ion-loading
 ## Resultado
 ![alt img](./imgs/first-page.PNG)
 ![alt img](./imgs/first-page-two.PNG)
